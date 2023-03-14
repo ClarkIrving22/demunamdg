@@ -1,8 +1,9 @@
-$(document).ready(function() {
-    cargarPersonas();
-    $('#personas-tabla').DataTable();
-});
 
+//$(document).ready(function() {
+    //cargarPersonas();
+//    $('#personas-tabla').DataTable();
+//});
+cargarPersonas()
 async function cargarPersonas() {
     const request = await fetch('api/personas', {
         method: 'GET',
@@ -41,7 +42,7 @@ async function eliminarUsuario(id){
 function getHeaders(){
     return{
       'Accept': "application/json",
-      'Content-Type': "application/json",
+      'Content-Type': "application/json"
       //'Authorization': localStorage.token
     };
 }
