@@ -38,6 +38,19 @@ table thead tr th{
 	font-weight: lighter;
 }
 
+[data-sort]:hover {
+    cursor: pointer;
+    background-color: #607D8B;
+}
+
+[data-dir="asc"]:after {
+    content: ' ↗';
+}
+
+[data-dir="desc"]:after {
+    content: ' ↘';
+}
+
 th, td {    
     padding: 10px;
 }

@@ -3,9 +3,10 @@ var totalSearchCount=0;
 
 $(function(){    
     cargarPersonas();
+    document.querySelector('.myTable').tsortable();
 });
 
-function setNumbersOfRows(){
+function obtenerTotalFilas(){
     totalRowCount = $("#myTable tbody tr").length;
     totalSearchCount = totalRowCount;
     document.getElementById("numero_filas").innerHTML = "Mostrando "+totalSearchCount+" de "+totalRowCount+" elementos.";
@@ -64,5 +65,5 @@ async function cargarPersonas() {
       listadoHTML += personaHTML;
     }
     document.querySelector('#myTable tbody').outerHTML = listadoHTML;
-    setNumbersOfRows();
+    obtenerTotalFilas();
 }
