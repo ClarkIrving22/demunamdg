@@ -14,11 +14,12 @@ import lombok.Setter;
 @Entity
 @Table(name = "persona")
 public class Persona {
+    /*ID autoincrementable
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "id")
-    private int id;
-
+    private int id;*/
+    @Id
     @Getter @Setter @Column(name = "dni")
     private String dni;
 

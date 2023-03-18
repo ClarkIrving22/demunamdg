@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>DEMUNA MDG</title>
+
+        <link href="index.css" rel="stylesheet">
+        <!--Para la fuente Roboto-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <!--Para que funcione el $(function(){})-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!--Para el botón de cerrar sesión-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    </head>
+    <body>
+        
+        <div id="otros">
+            <h2>Personas</h2>
+            <input type="text" id="myInput" onkeyup="busqueda()" placeholder="Buscar por nombres" title="Type in a name">
+        </div>
+
+        <div id="div-mayor-tabla">
+            <div id="div-tabla">            
+                <table id="myTable">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" class="thead_checkbox"/></th>
+                            <th>DNI</th>
+                            <th>Apellidos y Nombres</th>
+                            <th>Fecha Nac.</th>
+                            <th>Telefono</th>
+                            <th>Direccion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--
+                        <tr onclick="">
+                            <td><input type="checkbox" class="tbody_checkbox"></td>
+                            <td>Jill</td>
+                            <td>Will Smith</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="numero_filas">            
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
