@@ -2,7 +2,7 @@ var totalRowCount=0;
 var totalSearchCount=0;
 
 $(function(){    
-    cargarPersonas();    
+    cargarPersonas();
 });
 
 function setNumbersOfRows(){
