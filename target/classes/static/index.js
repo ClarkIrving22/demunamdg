@@ -13,6 +13,7 @@ function obtenerTotalFilas(){
 }
 
 function busqueda() {
+    totalSearchCount = 0;
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -31,8 +32,7 @@ function busqueda() {
         }
       }       
     }
-    document.getElementById("numero_filas").innerHTML = "Mostrando "+totalSearchCount+" de "+totalRowCount+" elementos.";
-    totalSearchCount = 0;
+    document.getElementById("numero_filas").innerHTML = "Mostrando "+totalSearchCount+" de "+totalRowCount+" elementos.";    
 }
 
 function getHeaders(){

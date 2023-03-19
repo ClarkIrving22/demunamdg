@@ -2,6 +2,12 @@
     background: #EEEEEE;
     font-family: "Roboto", sans-serif;    
     font-size: 15px;
+    --blue_grey_500: #607D8B;
+    --blue_grey_400: #78909C;
+    --blue_grey_300: #90A4AE;
+    --blue_grey_200: #B0BEC5;
+    --blue_grey_100: #CFD8DC;
+    --blue_grey_50: #ECEFF1;
 }
 
 /*(1) #div-mayor-tabla - inicio*/
@@ -12,14 +18,10 @@
 }*/
 
 #div-tabla{
-    overflow-x: auto;    
-    max-height: 450px;    
-
+    overflow-x: auto;
+    max-height: 450px;
     scroll-behavior: smooth;
-    border-top: 3px solid #607D8B;
-    border-left: 3px solid #607D8B;
-    border-bottom: 3px solid #607D8B;
-    border-right: 3px solid #607D8B;    
+    border: 3px solid var(--blue_grey_500);
 }
 
 table {
@@ -33,14 +35,14 @@ table thead tr th{
     z-index: 1;
 
     text-align: left;
-    background-color: #607D8B;
+    background-color: var(--blue_grey_500);
 	color: #ffffff;
 	font-weight: lighter;
 }
 
 [data-sort]:hover {
     cursor: pointer;
-    background-color: #607D8B;
+    background-color: var(--blue_grey_500);
 }
 
 [data-dir="asc"]:after {
@@ -56,7 +58,7 @@ th, td {
 }
 
 td{
-    border-top: 1px solid #607D8B;
+    border-top: 1px solid var(--blue_grey_500);
     /*border-bottom: 1px solid #607D8B;*/   
 }
 
@@ -71,15 +73,15 @@ table tbody tr td:first-child {
 }
 
 table tbody tr:hover {
-    background: #CFD8DC;
+    background: var(--blue_grey_100);
 }
 
 .thead_checkbox{
-    accent-color: #B0BEC5;
+    accent-color: var(--blue_grey_200);
 }
 
 .tbody_checkbox{
-    accent-color: #607D8B;
+    accent-color: var(--blue_grey_500);
 }
 
 #numero_filas{
@@ -103,13 +105,13 @@ table tbody tr:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #CFD8DC; 
+    background: var(--blue_grey_100);
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #B0BEC5; 
+    background: var(--blue_grey_200);
 }
 
 /*(1) #div-mayor-tabla - final*/
@@ -119,9 +121,21 @@ table tbody tr:hover {
     padding: 5px;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
+    border: 2px solid var(--blue_grey_500);
+    border-radius: 5px;
+    background: white;
+}
+
+#myInput:focus{
+    border: 2px solid var(--blue_grey_300) !important;
+    box-shadow: 0 0 5px var(--blue_grey_300) !important;
+    -moz-box-shadow: 0 0 5px var(--blue_grey_300) !important;
+    -webkit-box-shadow: 0 0 5px var(--blue_grey_300) !important;
+    outline-offset: 0px !important;
+    outline: none !important;
 }
 
 h2{
     text-align: center;
-    color: #607D8B;
+    color: var(--blue_grey_500);
 }
