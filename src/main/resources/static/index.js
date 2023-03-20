@@ -4,7 +4,31 @@ var totalSearchCount=0;
 $(function(){    
     cargarPersonas();
     document.querySelector('.myTable').tsortable();
+    checkboxes();
 });
+
+function checkboxes(){
+  $('#thead_checkbox').on('click',function(){
+    if(this.checked){
+        $('.tbody_checkbox').each(function(){
+            this.checked = true;
+        });
+    }else{
+        $('.tbody_checkbox').each(function(){
+            this.checked = false;
+        });
+    }
+  });
+
+  $('.tbody_checkbox').on('click',function(){
+      if($('.tbody_checkbox:checked').length == $('.tbody_checkbox').length){
+          $('#thead_checkbox').prop('checked',true);
+      }else{
+          $('#thead_checkbox').prop('checked',false);
+      }
+  });
+}
+
 
 function obtenerTotalFilas(){
     totalRowCount = $("#myTable tbody tr").length;
