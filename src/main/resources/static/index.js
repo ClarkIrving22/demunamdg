@@ -4,9 +4,9 @@ var totalSearchCount=0;
 $(function(){    
     cargarPersonas();
     document.querySelector('.myTable').tsortable();
-    checkboxes();
 });
 
+/*
 function checkboxes(){
   $('#thead_checkbox').on('click',function(){
     if(this.checked){
@@ -28,7 +28,7 @@ function checkboxes(){
       }
   });
 }
-
+*/
 
 function obtenerTotalFilas(){
     totalRowCount = $("#myTable tbody tr").length;
@@ -44,7 +44,7 @@ function busqueda() {
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[2];
+      td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -79,12 +79,15 @@ async function cargarPersonas() {
       let telefonoTexto = persona.telefono == null || persona.telefono == ''? '----' : persona.telefono;      
       //let btn_eliminar = '<a href="#" onclick="eliminarUsuario('+persona.id+')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
       let personaHTML = '<tr onclick="">'+
-                          '<td><input type="checkbox" class="tbody_checkbox"></td>'+
-                          '<td>'+persona.dni+'</td>'+
                           '<td>'+persona.apellidopaterno+' '+persona.apellidomaterno+' '+persona.nombres+'</td>'+
+                          '<td>'+persona.dni+'</td>'+                          
                           '<td>'+fechanacTexto+'</td>'+
                           '<td>'+telefonoTexto+'</td>'+
                           '<td>'+persona.direccion+'</td>'+
+                          '<td>'+
+                            '<a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>'+
+                            '<a class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>'+
+                          '</td>'+
                         '</tr>';
       listadoHTML += personaHTML;
     }

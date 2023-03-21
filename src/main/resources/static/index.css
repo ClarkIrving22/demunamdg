@@ -1,13 +1,14 @@
 :root{
-    background: #EEEEEE;
-    font-family: "Roboto", sans-serif;    
-    font-size: 15px;
+    --font-size_general: 16px;
     --blue_grey_500: #607D8B;
     --blue_grey_400: #78909C;
     --blue_grey_300: #90A4AE;
     --blue_grey_200: #B0BEC5;
     --blue_grey_100: #CFD8DC;
     --blue_grey_50: #ECEFF1;
+    background: #EEEEEE;
+    font-family: "Roboto", sans-serif;    
+    font-size: var(--font-size_general);    
 }
 
 /*(1) #div-mayor-tabla - inicio*/
@@ -53,23 +54,17 @@ table thead tr th{
     content: ' ↘';
 }
 
-th, td {    
-    padding: 10px;
+th{
+    padding: 12px 10px;
+}
+
+td {    
+    padding: 7px 10px;
 }
 
 td{
     border-top: 1px solid var(--blue_grey_500);
     /*border-bottom: 1px solid #607D8B;*/   
-}
-
-table thead tr th:first-child {
-    min-width: 20px;
-    max-width: 20px;
-    text-align: center;
-}
-
-table tbody tr td:first-child {
-    text-align: center;
 }
 
 table tbody tr:hover {
@@ -87,7 +82,7 @@ table tbody tr:hover {
 #numero_filas{
     margin-top: 5px;
     font-family: "Roboto", sans-serif;
-    font-size: 15px;   
+    font-size: var(--font-size_general);   
 }
 
 /* width and height*/
@@ -120,7 +115,7 @@ table tbody tr:hover {
     margin-bottom: 10px;
     padding: 5px;
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
+    font-size: var(--font-size_general);
     border: 2px solid var(--blue_grey_500);
     border-radius: 5px;
     background: white;
@@ -138,4 +133,45 @@ table tbody tr:hover {
 h2{
     text-align: center;
     color: var(--blue_grey_500);
+}
+
+table thead tr th:last-child {
+    width: 100px;
+}
+
+table tbody tr td a {
+    cursor: pointer;
+    margin: 0 5px;
+    min-width: 24px;
+}
+
+table tbody tr td a.add {
+    color: #27C46B;
+}
+    
+table tbody tr td a.edit {
+    color: #FB8C00;
+}
+
+table tbody tr td a.edit:hover{
+    color: var(--blue_grey_500);
+}
+
+table tbody tr td a.delete {
+    color: #E34724;
+}
+
+table tbody tr td a.delete:hover{
+    color: var(--blue_grey_500);
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
 }

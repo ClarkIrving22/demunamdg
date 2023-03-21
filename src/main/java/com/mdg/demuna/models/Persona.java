@@ -1,6 +1,8 @@
 package com.mdg.demuna.models;
 
-import java.util.Date;
+import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,6 +34,7 @@ public class Persona {
     @Getter @Setter @Column(name = "nombres")
     private String nombres;
 
+    @JsonFormat(pattern="dd/MM/yyyy")
     @Getter @Setter @Column(name = "fechanac")
     private Date fechanac;
 
