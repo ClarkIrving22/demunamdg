@@ -34,7 +34,7 @@ public class Persona {
     @Getter @Setter @Column(name = "nombres")
     private String nombres;
 
-    @JsonFormat(pattern="dd/MM/yyyy")
+    @JsonFormat(pattern="dd MMM yyyy")
     @Getter @Setter @Column(name = "fechanac")
     private Date fechanac;
 
