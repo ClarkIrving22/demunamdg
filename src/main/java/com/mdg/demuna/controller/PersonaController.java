@@ -16,7 +16,7 @@ public class PersonaController {
     private PersonaDao personaDao;
 
     @RequestMapping(value = "api/personas", method = RequestMethod.GET)
-    public List<Persona> getDistritos(){
+    public List<Persona> getPersonas(){
         return personaDao.getPersonas();
     }
 }
